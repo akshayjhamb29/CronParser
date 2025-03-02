@@ -5,7 +5,4 @@ public class CronParseException extends RuntimeException {
         super(message);
     }
 
-    public CronParseException(String message, Throwable cause) {
-        super(message, cause);
-    }
 }
