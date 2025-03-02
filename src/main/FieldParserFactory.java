@@ -1,3 +1,5 @@
+package main;
+
 class FieldParserFactory {
     private static final FieldParser NUMERIC_PARSER = new NumericFieldParser();
     private static final FieldParser COMMAND_PARSER = new CommandFieldParser();

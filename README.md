@@ -1,8 +1,8 @@
-# CronParser
+# main.CronParser
 
 ## Overview
 
-CronParser is a Java-based utility for parsing and interpreting cron expressions. It takes a cron schedule string as input and parses its various time fields.
+main.CronParser is a Java-based utility for parsing and interpreting cron expressions. It takes a cron schedule string as input and parses its various time fields.
 
 ## Prerequisites
 
@@ -19,15 +19,15 @@ CronParser is a Java-based utility for parsing and interpreting cron expressions
 To compile the project, run:
 
 ```bash
-javac --release 8 -cp "lib/*;src" -d out src/*.java
+javac --release 8 -cp "lib/*;src" -d out src/main/*.java src/test/*.java
 ```
 
 ## Running the Parser
 
-To execute the CronParser with a sample cron expression, use:
+To execute the main.CronParser with a sample cron expression, use:
 
 ```bash
-java -cp "lib/*;out" CronParser "*/15 0 1,15 * * abcd"
+java -cp "lib/*;out" main.CronParser "*/15 0 1,15 * 1-5 abcd"
 ```
 
 ## Expected Output Format
@@ -48,5 +48,5 @@ command       abcd
 To execute JUnit tests, use the following command:
 
 ```bash
-java -cp "lib/*;out" org.junit.runner.JUnitCore CronParserTest
+java -cp "lib/*;out" org.junit.runner.JUnitCore test.CronParserTest
 ```

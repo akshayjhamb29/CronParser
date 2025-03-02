@@ -1,3 +1,5 @@
+package main;
+
 public final class CronValidator {
     private CronValidator() {
     }

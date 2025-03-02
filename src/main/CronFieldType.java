@@ -1,5 +1,7 @@
+package main;
+
 enum CronFieldType {
-    //SECOND(CronConstants.SECOND_LABEL,0 ,59 ),
+    //SECOND(main.CronConstants.SECOND_LABEL,0 ,59 ),
     MINUTE(CronConstants.MINUTE_LABEL, 0, 59),
     HOUR(CronConstants.HOUR_LABEL, 0, 23),
     DAY_OF_MONTH(CronConstants.DAY_OF_MONTH_LABEL, 1, 31),

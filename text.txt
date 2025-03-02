@@ -1,2 +1,2 @@
 javac --release 8 -cp "lib/*;src" -d out src/*.java
-java -cp "lib/*;out" org.junit.runner.JUnitCore CronParserTest
+java -cp "lib/*;out" org.junit.runner.JUnitCore test.CronParserTest

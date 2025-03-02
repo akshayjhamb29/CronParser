@@ -1,4 +1,6 @@
-class CommandFieldParser implements FieldParser {
+package main;
+
+public class CommandFieldParser implements FieldParser {
 
     @Override
     public Object parse(String expression, CronFieldType fieldType) {

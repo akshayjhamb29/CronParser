@@ -1,3 +1,10 @@
+package test;
+
+import main.CronExpressionResult;
+import main.CronParseException;
+import main.CronParser;
+import main.CronValidationException;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import java.util.Arrays;
@@ -25,12 +32,12 @@ public class CronParserTest {
         Set<Integer> expectedMonth = new HashSet<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12));
         Set<Integer> expectedDayOfWeek = new HashSet<>(Arrays.asList(1, 2, 3, 4, 5));
 
-        assertEquals(expectedMinutes, result.getMinutes());
-        assertEquals(expectedHours, result.getHours());
-        assertEquals(expectedDayOfMonth, result.getDaysOfMonth());
-        assertEquals(expectedMonth, result.getMonths());
-        assertEquals(expectedDayOfWeek, result.getDaysOfWeek());
-        assertEquals("/usr/bin/find", result.getCommand());
+        Assert.assertEquals(expectedMinutes, result.getMinutes());
+        Assert.assertEquals(expectedHours, result.getHours());
+        Assert.assertEquals(expectedDayOfMonth, result.getDaysOfMonth());
+        Assert.assertEquals(expectedMonth, result.getMonths());
+        Assert.assertEquals(expectedDayOfWeek, result.getDaysOfWeek());
+        Assert.assertEquals("/usr/bin/find", result.getCommand());
     }
 
     @Test
@@ -43,12 +50,12 @@ public class CronParserTest {
         Set<Integer> expectedMonth = new HashSet<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12));
         Set<Integer> expectedDayOfWeek = new HashSet<>(Arrays.asList(0, 1, 2, 3, 4, 5, 6));
 
-        assertEquals(expectedMinutes, result.getMinutes());
-        assertEquals(expectedHours, result.getHours());
-        assertEquals(expectedDayOfMonth, result.getDaysOfMonth());
-        assertEquals(expectedMonth, result.getMonths());
-        assertEquals(expectedDayOfWeek, result.getDaysOfWeek());
-        assertEquals("/usr/bin/find", result.getCommand());
+        Assert.assertEquals(expectedMinutes, result.getMinutes());
+        Assert.assertEquals(expectedHours, result.getHours());
+        Assert.assertEquals(expectedDayOfMonth, result.getDaysOfMonth());
+        Assert.assertEquals(expectedMonth, result.getMonths());
+        Assert.assertEquals(expectedDayOfWeek, result.getDaysOfWeek());
+        Assert.assertEquals("/usr/bin/find", result.getCommand());
     }
 
     @Test
@@ -67,12 +74,12 @@ public class CronParserTest {
         Set<Integer> expectedMonths = new HashSet<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12));
         Set<Integer> expectedDayOfWeek = new HashSet<>(Arrays.asList(0, 1, 2, 3, 4, 5, 6));
 
-        assertEquals(expectedMinutes, result.getMinutes());
-        assertEquals(expectedHours, result.getHours());
-        assertEquals(expectedDayOfMonth, result.getDaysOfMonth());
-        assertEquals(expectedMonths, result.getMonths());
-        assertEquals(expectedDayOfWeek, result.getDaysOfWeek());
-        assertEquals("/usr/bin/find", result.getCommand());
+        Assert.assertEquals(expectedMinutes, result.getMinutes());
+        Assert.assertEquals(expectedHours, result.getHours());
+        Assert.assertEquals(expectedDayOfMonth, result.getDaysOfMonth());
+        Assert.assertEquals(expectedMonths, result.getMonths());
+        Assert.assertEquals(expectedDayOfWeek, result.getDaysOfWeek());
+        Assert.assertEquals("/usr/bin/find", result.getCommand());
     }
 
     @Test
@@ -86,12 +93,12 @@ public class CronParserTest {
         Set<Integer> expectedMonth = new HashSet<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12));
         Set<Integer> expectedDayOfWeek = new HashSet<>(Arrays.asList(0, 1, 2, 3, 4, 5, 6));
 
-        assertEquals(expectedMinutes, result.getMinutes());
-        assertEquals(expectedHours, result.getHours());
-        assertEquals(expectedDayOfMonth, result.getDaysOfMonth());
-        assertEquals(expectedMonth, result.getMonths());
-        assertEquals(expectedDayOfWeek, result.getDaysOfWeek());
-        assertEquals("/usr/bin/find", result.getCommand());
+        Assert.assertEquals(expectedMinutes, result.getMinutes());
+        Assert.assertEquals(expectedHours, result.getHours());
+        Assert.assertEquals(expectedDayOfMonth, result.getDaysOfMonth());
+        Assert.assertEquals(expectedMonth, result.getMonths());
+        Assert.assertEquals(expectedDayOfWeek, result.getDaysOfWeek());
+        Assert.assertEquals("/usr/bin/find", result.getCommand());
     }
 
     @Test
@@ -105,12 +112,12 @@ public class CronParserTest {
         Set<Integer> expectedMonth = new HashSet<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12));
         Set<Integer> expectedDayOfWeek = new HashSet<>(Arrays.asList(0, 1, 2, 3, 4, 5, 6));
 
-        assertEquals(expectedMinutes, result.getMinutes());
-        assertEquals(expectedHours, result.getHours());
-        assertEquals(expectedDayOfMonth, result.getDaysOfMonth());
-        assertEquals(expectedMonth, result.getMonths());
-        assertEquals(expectedDayOfWeek, result.getDaysOfWeek());
-        assertEquals("/usr/bin/find", result.getCommand());
+        Assert.assertEquals(expectedMinutes, result.getMinutes());
+        Assert.assertEquals(expectedHours, result.getHours());
+        Assert.assertEquals(expectedDayOfMonth, result.getDaysOfMonth());
+        Assert.assertEquals(expectedMonth, result.getMonths());
+        Assert.assertEquals(expectedDayOfWeek, result.getDaysOfWeek());
+        Assert.assertEquals("/usr/bin/find", result.getCommand());
     }
 
     @Test
@@ -125,12 +132,12 @@ public class CronParserTest {
         Set<Integer> expectedMonth = new HashSet<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12));
         Set<Integer> expectedDayOfWeek = new HashSet<>(Arrays.asList(0, 1, 2, 3, 4, 5, 6));
 
-        assertEquals(expectedMinutes, result.getMinutes());
-        assertEquals(expectedHours, result.getHours());
-        assertEquals(expectedDayOfMonth, result.getDaysOfMonth());
-        assertEquals(expectedMonth, result.getMonths());
-        assertEquals(expectedDayOfWeek, result.getDaysOfWeek());
-        assertEquals("/usr/bin/find", result.getCommand());
+        Assert.assertEquals(expectedMinutes, result.getMinutes());
+        Assert.assertEquals(expectedHours, result.getHours());
+        Assert.assertEquals(expectedDayOfMonth, result.getDaysOfMonth());
+        Assert.assertEquals(expectedMonth, result.getMonths());
+        Assert.assertEquals(expectedDayOfWeek, result.getDaysOfWeek());
+        Assert.assertEquals("/usr/bin/find", result.getCommand());
     }
 
     @Test
@@ -145,12 +152,12 @@ public class CronParserTest {
         Set<Integer> expectedMonth = new HashSet<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12));
         Set<Integer> expectedDayOfWeek = new HashSet<>(Arrays.asList(0, 1, 2, 3, 4, 5, 6));
 
-        assertEquals(expectedMinutes, result.getMinutes());
-        assertEquals(expectedHours, result.getHours());
-        assertEquals(expectedDayOfMonth, result.getDaysOfMonth());
-        assertEquals(expectedMonth, result.getMonths());
-        assertEquals(expectedDayOfWeek, result.getDaysOfWeek());
-        assertEquals("/usr/bin/find", result.getCommand());
+        Assert.assertEquals(expectedMinutes, result.getMinutes());
+        Assert.assertEquals(expectedHours, result.getHours());
+        Assert.assertEquals(expectedDayOfMonth, result.getDaysOfMonth());
+        Assert.assertEquals(expectedMonth, result.getMonths());
+        Assert.assertEquals(expectedDayOfWeek, result.getDaysOfWeek());
+        Assert.assertEquals("/usr/bin/find", result.getCommand());
     }
 
     @Test(expected = CronParseException.class)
