@@ -27,7 +27,7 @@ javac --release 8 -cp "lib/*;src" -d out src/*.java
 To execute the CronParser with a sample cron expression, use:
 
 ```bash
-java -cp "lib/*;out" CronParser "*/15 0 1,15 * 1-5 abcd"
+java -cp "lib/*;out" CronParser "*/15 0 1,15 * * abcd"
 ```
 
 ## Expected Output Format
