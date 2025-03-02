@@ -6,7 +6,7 @@ CronParser is a Java-based utility for parsing and interpreting cron expressions
 
 ## Prerequisites
 
-- JDK 8 must be installed on your system. If not, download and install it from [Adoptium](https://adoptium.net/) or [Oracle](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html).
+- JDK 8 must be installed on your system. If not, download and install it.
 - Ensure your environment variables are correctly set for `JAVA_HOME` and `PATH`.
 
 ## Setup Instructions
