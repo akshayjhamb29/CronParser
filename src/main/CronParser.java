@@ -17,7 +17,7 @@ public class CronParser {
 
     public static void main(String[] args) {
         if (args.length != 1) {
-            System.out.println(CronConstants.USAGE_MESSAGE);
+            System.out.println(CronConstants.SINGLE_ARGUMENT_NOT_PASSED);
             return;
         }
 
