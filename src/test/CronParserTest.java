@@ -8,11 +8,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
-import static org.junit.Assert.assertEquals;
 
 public class CronParserTest {
     private CronParser cronParser;
@@ -21,7 +19,7 @@ public class CronParserTest {
     public void setUp() {
         cronParser = new CronParser();
     }
-
+    
     @Test
     public void testParseWithValidCronExpression() {
         CronExpressionResult result = cronParser.parse("*/15 0 1,15 * 1-5 /usr/bin/find");
@@ -165,7 +163,7 @@ public class CronParserTest {
         cronParser.parse("* * * * /usr/bin/find");
     }
 
-    @Test(expected = NumberFormatException.class)
+    @Test(expected = CronParseException.class)
     public void testParseWithInvalidMinuteFormat() {
         cronParser.parse("a * * * * /usr/bin/find");
     }

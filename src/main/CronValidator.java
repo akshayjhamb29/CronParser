@@ -1,6 +1,6 @@
 package main;
 
-public final class CronValidator {
+public class CronValidator {
     private CronValidator() {
     }
     public static void validateRange(int start, int end, int min, int max, String fieldLabel) {
@@ -19,5 +19,22 @@ public final class CronValidator {
             );
         }
 
+    }
+    public static void validateStepFormat(String[] stepParts, String expression) {
+        if (stepParts.length != 2 || stepParts[0].isEmpty() || stepParts[1].isEmpty()) {
+            throw new CronParseException("Invalid step format: " + expression);
+        }
+    }
+
+    public static void validateRangeFormat(String[] rangeParts, String expression) {
+        if (rangeParts.length != 2 || rangeParts[0].isEmpty() || rangeParts[1].isEmpty()) {
+            throw new CronParseException("Invalid range format: " + expression);
+        }
+    }
+
+    public static void validatePositiveValue(int value, String fieldName) {
+        if (value <= 0) {
+            throw new CronParseException(fieldName + " must be positive: " + value);
+        }
     }
 }

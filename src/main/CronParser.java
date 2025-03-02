@@ -5,32 +5,6 @@ import java.util.TreeSet;
 
 
 public class CronParser {
-    private static final CronFieldType[] FIELD_ORDER = {
-            //main.CronFieldType.SECOND,
-            CronFieldType.MINUTE,
-            CronFieldType.HOUR,
-            CronFieldType.DAY_OF_MONTH,
-            CronFieldType.MONTH,
-            CronFieldType.DAY_OF_WEEK,
-            CronFieldType.COMMAND
-    };
-
-    public static void main(String[] args) {
-        if (args.length != 1) {
-            System.out.println(CronConstants.SINGLE_ARGUMENT_NOT_PASSED);
-            return;
-        }
-
-        try {
-             String cronExpression = args[0];
-//            //String cronExpression = "1-59/10 1-23/10 1-23/5 * * /usr/bin/find";
-//            String cronExpression = "* * * * *  /usr/bin/find rm-rf";
-            CronExpressionResult result = new CronParser().parse(cronExpression);
-            System.out.println(result);
-        } catch (CronParseException ex) {
-            System.out.println(CronConstants.ERROR_MESSAGE + ex.getMessage());
-        }
-    }
 
     public CronExpressionResult parse(String cronExpression) {
         String[] parts = cronExpression.trim().split("\\s+");
@@ -46,7 +20,7 @@ public class CronParser {
         String command = "";
 
         for (int i = 0; i < CronConstants.PARTS_LENGTH; i++) {
-            CronFieldType type = FIELD_ORDER[i];
+            CronFieldType type = CronConstants.FIELD_ORDER[i];
             FieldParser parser = FieldParserFactory.getParser(type);
             Object parsedValue = parser.parse(parts[i], type);
 

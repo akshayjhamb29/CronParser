@@ -19,6 +19,10 @@ main.CronParser is a Java-based utility for parsing and interpreting cron expres
 To compile the project, run:
 
 ```bash
+mkdir out
+```
+
+```bash
 javac --release 8 -cp "lib/*;src" -d out src/main/*.java src/test/*.java
 ```
 
@@ -27,7 +31,7 @@ javac --release 8 -cp "lib/*;src" -d out src/main/*.java src/test/*.java
 To execute the main.CronParser with a sample cron expression, use:
 
 ```bash
-java -cp "lib/*;out" main.CronParser "*/15 0 1,15 * 1-5 abcd"
+java -cp "lib/*;out" main.Main "*/15 0 1,15 * 1-5 abcd"
 ```
 
 ## Expected Output Format
